@@ -4,15 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Форма для подбора питания</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
 
   <header class="page-header">
     <div class="page-header__wrapper">
-      <a class="page_header__logo-pic"><img src="/source/img/logo-pic-mobile.svg" width="33" height="38"
+      <a class="page_header__logo-pic" href="index.html"><img src="img/logo-pic-mobile.svg" width="33" height="38"
           alt="Логотип с котом"></a>
-      <a class="logo-title"><img src="/source/img/logo-title.png" width="101" height="18" alt="Логотип Кэт энерджи"></a>
+      <a class="logo-title"><img src="img/logo-title.png" width="101" height="18" alt="Логотип Кэт энерджи"></a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
@@ -42,9 +44,8 @@
             программу питания для вашего кота</p>
           <ul class="info info__list">
             <li class="info__item">
-              <label for="info-name">ИМЯ:*</label>
-              <input class="info__name" type="text" name="pool" id="info-name" placeholder="барсик">
-
+              <label for="info-name">Имя:*</label>
+              <input class="info__name" type="text" name="pool" id="info-name" placeholder="БАРСИК">
             </li>
             <li class="info__item">
               <label for="info-weight">Вес (кг):*</label>
@@ -55,29 +56,29 @@
               <input class="info__age" type="text" name="age" id="info-age" placeholder="7">
             </li>
           </ul>
-          <ul class="programm programm-list">
-            <li class="programm__item">
-              <input class="programm__input-radio" type="radio" name="product" value="slim" id="weight-loss" checked>
+          <ul class="programm-pick programm-pick__list">
+            <li class="programm-pick__item">
+              <input class="programm-pick__input-radio" type="radio" name="product" value="slim" id="weight-loss" checked>
               <label for="weight-loss">Похудение</label>
             </li>
-            <li class="programm__item">
-              <input class="programm__input-radio" type="radio" name="product" value="weight" id="weight-gain">
+            <li class="programm-pick__item">
+              <input class="programm-pick__input-radio" type="radio" name="product" value="weight" id="weight-gain">
               <label for="weight-gain">Набор массы</label>
             </li>
-            <li class="programm__item">
-              <input class="programm__input-radio" type="radio" name="product" value="advice" id="need-advice">
+            <li class="programm-pick__item">
+              <input class="programm-pick__input-radio" type="radio" name="product" value="advice" id="need-advice">
               <label for="need-advice">Не знаю (Нужен ваш совет)</label>
             </li>
           </ul>
         </section>
 
         <fieldset class="connection">
-          <legend>Контактные данные
+          <legend class="connection__title">Контактные данные
             (владельца кота)</legend>
           <ul class="connection__list">
             <li class="connection__item">
               <label for="email">E-mail:*</label>
-              <input type="email" id="email" placeholder="kuklachev@gmail.com">
+              <input type="email" id="email" placeholder="KUKLACHEV@GMAIL.COM">
             </li>
             <li class="connection__item">
               <label for="tel">Телефон:*</label>
@@ -86,12 +87,12 @@
           </ul>
         </fieldset>
         <fieldset class="comments">
-          <legend>Комментарий</legend>
-          <textarea name="comments" id="comments" cols="30" rows="10"
+          <legend class="comments__title">Комментарий</legend>
+          <textarea class="comments__text" name="comments" id="comments"
             placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
         <fieldset class="addition">
-          <legend>Дополнительно</legend>
+          <legend class="addition__title">Дополнительно</legend>
           <ul class="addition__list">
             <li class="addition__item">
               <input class="addition__input-checkbox" type="checkbox" name="sugar-free" id="sugar-free" checked>
@@ -110,17 +111,15 @@
               <label for="vitamins">Витамины</label>
             </li>
           </ul>
-
         </fieldset>
-        <button class="button" type="submit">Отправить заявку</button>
+        <button class="button button--submit" type="submit">Отправить заявку</button>
         <p class="nutrition-form__legend">
           * — Обязательные поля
         </p>
       </div>
-
     </form>
 
-    <section class="contacts contacts-form">
+    <section class="contacts contacts--form">
       <div class="contacts__wrapper">
         <h2 class="visually-hidden">Контакты</h2>
         <header class="contacts__header">
@@ -130,14 +129,14 @@
             Конюшенная, д. 19/8
             Санкт-Петербург</p>
         </header>
-        <img src="/source/img/map-mobile.png" width="320" height="362" alt="Кэт энерджи на карте">
+        <img src="img/map-mobile.png" width="320" height="362" alt="Кэт энерджи на карте">
       </div>
     </section>
   </main>
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
-      <a class="logo-title"><img src="/source/img/logo-title.png" width="128" height="24" alt="Логотип Кэт энерджи"></a>
+      <a class="logo-title"><img src="img/logo-title.png" width="128" height="24" alt="Логотип Кэт энерджи"></a>
       <ul class="social social__list">
         <li class="social__item">
           <a href="#" class="social__link">
