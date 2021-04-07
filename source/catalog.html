@@ -10,7 +10,7 @@
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__wrapper">
-      <a class="page_header__logo-pic"><img src="img/logo-pic-mobile.svg" width="33" height="38"
+      <a class="page-header__logo-pic" href="index.html"><img src="img/logo-pic-mobile.svg" width="33" height="38"
           alt="Логотип с котом"></a>
       <a class="logo-title"><img src="img/logo-title.png" width="101" height="18" alt="Логотип Кэт энерджи"></a>
       <nav class="main-nav">
@@ -33,15 +33,15 @@
   </header>
 
   <main class="main-catalog">
-    <h1>Каталог товаров Кэт энерджи</h1>
+    <h1 class="visually-hidden">Каталог товаров Кэт энерджи</h1>
     <div class="main-catalog__wrapper">
       <section class="features">
-        <h2>Каталог продукции</h2>
+        <h2 class="features__title">Каталог продукции</h2>
         <ul class="features__list">
           <li class="features__item">
             <img src="img/chicken-500.jpg" width="68" height="86" alt="Банка с курицей 500г.">
             <div class="features__block-info">
-              <p class="features__title">Cat Energy
+              <p class="features__name">Cat Energy
                 PRO
                 500 г</p>
               <dl class="features__info">
@@ -53,12 +53,12 @@
                 <dd class="features__description">700 Р.</dd>
               </dl>
             </div>
-            <button class="order-button" type="button">Заказать</button>
+            <button class="button button--order" type="button">Заказать</button>
           </li>
           <li class="features__item">
             <img src="img/chicken-1000.jpg" width="84" height="101" alt="Банка с курицей 1000г.">
             <div class="features__block-info">
-              <p class="features__title">Cat Energy
+              <p class="features__name">Cat Energy
                 PRO
                 1000 г</p>
               <dl class="features__info">
@@ -70,12 +70,12 @@
                 <dd class="features__description">1000 Р.</dd>
               </dl>
             </div>
-            <button class="order-button" type="button">Заказать</button>
+            <button class="button button--order" type="button">Заказать</button>
           </li>
           <li class="features__item">
             <img src="img/fish-500.jpg" width="68" height="86" alt="Банка с рыбой 500г.">
             <div class="features__block-info">
-              <p class="features__title">Cat Energy
+              <p class="features__name">Cat Energy
                 PRO
                 500 г</p>
               <dl class="features__info">
@@ -87,12 +87,12 @@
                 <dd class="features__description">700 Р.</dd>
               </dl>
             </div>
-            <button class="order-button" type="button">Заказать</button>
+            <button class="button button--order" type="button">Заказать</button>
           </li>
           <li class="features__item">
             <img src="img/fish-1000.jpg" width="84" height="101" alt="Банка с рыбой 1000г.">
             <div class="features__block-info">
-              <p class="features__title">Cat Energy
+              <p class="features__name">Cat Energy
                 PRO
                 1000 г</p>
               <dl class="features__info">
@@ -104,12 +104,12 @@
                 <dd class="features__description">1000 Р.</dd>
               </dl>
             </div>
-            <button class="order-button" type="button">Заказать</button>
+            <button class="button button--order" type="button">Заказать</button>
           </li>
           <li class="features__item">
             <img src="img/buckwheat-500.jpg" width="68" height="86" alt="Банка с гречкой 500г.">
             <div class="features__block-info">
-              <p class="features__title">Cat Energy
+              <p class="features__name">Cat Energy
                 PRO
                 500 г</p>
               <dl class="features__info">
@@ -121,12 +121,12 @@
                 <dd class="features__description">400 Р.</dd>
               </dl>
             </div>
-            <button class="order-button" type="button">Заказать</button>
+            <button class="button button--order" type="button">Заказать</button>
           </li>
           <li class="features__item">
             <img src="img/buckwheat-1000.jpg" width="84" height="101" alt="Банка с гречкой 1000г.">
             <div class="features__block-info">
-              <p class="features__title">Cat Energy
+              <p class="features__name">Cat Energy
                 PRO
                 1000 г</p>
               <dl class="features__info">
@@ -138,12 +138,12 @@
                 <dd class="features__description">700 Р.</dd>
               </dl>
             </div>
-            <button class="order-button" type="button">Заказать</button>
+            <button class="button button--order" type="button">Заказать</button>
           </li>
           <li class="features__item">
             <img src="img/rice-500.jpg" width="68" height="86" alt="Банка с рисом 500г.">
             <div class="features__block-info">
-              <p class="features__title">Cat Energy
+              <p class="features__name">Cat Energy
                 PRO
                 500 г</p>
               <dl class="features__info">
@@ -155,59 +155,59 @@
                 <dd class="features__description">500 Р.</dd>
               </dl>
             </div>
-            <button class="order-button" type="button">Заказать</button>
+            <button class="button button--order" type="button">Заказать</button>
           </li>
           <li class="features__item">
-            <p class="features__title">Показать еще 100500 товаров</p>
+            <p class="features__name">Показать еще 100500 товаров</p>
             <p class="features__subtitle">На самом деле вкусов гораздо больше!</p>
-            <button class="show-all-button" type="button">Показать все</button>
+            <button class="button-show-all" type="button">Показать все</button>
           </li>
         </ul>
       </section>
 
       <section class="additional-goods">
         <div class="additional-goods__wrapper">
-          <h2>Дополнительные товары</h2>
+          <h2 class="additional-goods__title">Дополнительные товары</h2>
           <ul class="additional-goods__list">
             <li class="additional-goods__item">
-              <p class="additional-goods__title">
+              <p class="additional-goods__name">
                 Сахарозаменитель
               </p>
               <dl class="additional-goods__info">
                 <dt class="additional-goods__amount">1 упаковка (100 г)</dt>
                 <dd class="additional-goods__price">200 Р.</dd>
               </dl>
-              <button class="order-button" type="button">Заказать</button>
+              <button class="button button--order" type="button">Заказать</button>
             </li>
             <li class="additional-goods__item">
-              <p class="additional-goods__title">
+              <p class="additional-goods__name">
                 Питьевая вода
               </p>
               <dl class="additional-goods__info">
                 <dt class="additional-goods__amount">5 литров</dt>
                 <dd class="additional-goods__price">50 Р.</dd>
               </dl>
-              <button class="order-button" type="button">Заказать</button>
+              <button class="button button--order" type="button">Заказать</button>
             </li>
             <li class="additional-goods__item">
-              <p class="additional-goods__title">
+              <p class="additional-goods__name">
                 Молоко
               </p>
               <dl class="additional-goods__info">
                 <dt class="additional-goods__amount">1 литров</dt>
                 <dd class="additional-goods__price">100 Р.</dd>
               </dl>
-              <button class="order-button" type="button">Заказать</button>
+              <button class="button button--order" type="button">Заказать</button>
             </li>
             <li class="additional-goods__item">
-              <p class="additional-goods__title">
+              <p class="additional-goods__name">
                 Витамины
               </p>
               <dl class="additional-goods__info">
                 <dt class="additional-goods__amount">1 упаковка (30 г)</dt>
                 <dd class="additional-goods__price">300 Р.</dd>
               </dl>
-              <button class="order-button" type="button">Заказать</button>
+              <button class="button button--order" type="button">Заказать</button>
             </li>
           </ul>
           <div class="gift">
@@ -221,7 +221,7 @@
         </div>
       </section>
 
-      <section class="contacts contacts-catalog">
+      <section class="contacts contacts--catalog">
         <div class="contacts__wrapper">
           <h2 class="visually-hidden">Контакты</h2>
           <header class="contacts__header">
@@ -283,4 +283,5 @@
   </footer>
 
 </body>
+
 </html>
