@@ -1,5 +1,18 @@
 .page-header__wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin: 11px 0 17px;
+  justify-content: space-between;
+  .mobile-wrapper();
+  padding: 11px 0 17px;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-start;
+    .tablet-wrapper();
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-start;
+    .desktop-wrapper();
+    padding: 53px 0 17px;
+  }
 }

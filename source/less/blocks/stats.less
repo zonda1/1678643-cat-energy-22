@@ -3,6 +3,49 @@
   padding: 27px 0 25px;
 }
 
+.stats__wrapper {
+  .mobile-wrapper();
+
+  @media (min-width: @tablet-width) {
+    .tablet-wrapper();
+  }
+
+  @media (min-width: @desktop-width) {
+    .desktop-wrapper();
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .stats__title {
+    background-color: @white;
+  }
+
+  .stats__intro {
+    height: 100px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .stats__list {
+    width: 370px;
+    align-content: flex-start;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  .stats__slider {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    align-items: flex-end;
+    margin-bottom: 14px;
+  }
+}
+
 .stats__title {
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -14,6 +57,47 @@
   margin-bottom: 33px;
 }
 
+.stats__intro {
+  margin-bottom: 25px;
+  color: @special-dark-grey;
+}
+
+.stats__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-start;
+  }
+}
+
+.stats__item {
+  margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 55px;
+  }
+}
+
+.stats__item:last-child {
+  display: flex;
+  margin-bottom: 42px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
 .stats__number {
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -23,11 +107,6 @@
   color: @black;
   margin-bottom: 9px;
   // border: 1px solid @border-special;
-}
-
-.stats__intro {
-  margin-bottom: 25px;
-  color: @special-dark-grey;
 }
 
 .stats__description {
@@ -59,19 +138,35 @@
   color: @black;
 }
 
-.stats__item {
-  margin-bottom: 10px;
-}
-
-.stats__item:last-child {
-  display: flex;
-  margin-bottom: 42px;
-}
-
 .stats__amount {
   margin-left: 2px;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 42px;
+  }
 }
 
 .stats__slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   margin-top: 23px;
+}
+
+.stats__scale {
+  display: flex;
+  align-items: center;
+  height: 14px;
+  width: 84px;
+  background-color: @white;
+  border: 1px solid @border-special;
+  border-radius: 6px;
+}
+
+.stats__bar {
+  height: 6px;
+  width: 35px;
+  background-color: @basic-green;
+  border-radius: 6px;
+  margin-left: 4px;
 }
