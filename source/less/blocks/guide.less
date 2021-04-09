@@ -1,5 +1,17 @@
 .guide {
-  margin: 7px 0 42px;
+  margin: 7px 0 0;
+}
+
+.guide__wrapper {
+  .mobile-wrapper();
+
+  @media (min-width: @tablet-width) {
+    .tablet-wrapper();
+  }
+
+  @media (min-width: @desktop-width) {
+    .desktop-wrapper();
+  }
 }
 
 .guide__title {
@@ -11,16 +23,40 @@
   color: @black;
   margin-top: 0;
   margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .guide__list {
   .list-reset();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: space-between;
+  }
 }
 
 .guide__item {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    height: 280px;
+    margin-bottom: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin-bottom: 11px;
+  }
 }
 
 .guide__container-pic {
@@ -35,4 +71,11 @@
 
 .guide__description {
   color: @special-dark-grey;
+  max-width: 200px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 245px;
+  }
 }

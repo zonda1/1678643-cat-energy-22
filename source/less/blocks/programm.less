@@ -1,8 +1,19 @@
 .programm {
   background-color: @basic-grey;
-  padding-top: 30px;
-  padding-bottom: 22px;
+  height: 266px;
+  padding-top: 21px;
+  padding-bottom: 18px;
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    height: 374px;
+    margin-bottom: 71px;
+  }
 }
 
 .programm__title {

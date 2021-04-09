@@ -1,5 +1,11 @@
 .main-nav__list {
   .list-reset();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .main-nav__link {
@@ -10,4 +16,35 @@
   line-height: 20px;
   text-transform: uppercase;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    // color:@white;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: 440px;
+    margin-left: auto;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    width: 478px;
+    margin-left: auto;
+  }
 }

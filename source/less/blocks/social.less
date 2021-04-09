@@ -2,10 +2,15 @@
   .list-reset();
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   padding: 20px 0 21px;
   border-top: 1px solid @border-basic;
   border-bottom: 1px solid @border-basic;
   margin: 32px 0 22px;
+
+  @media (min-width: @tablet-width) {
+    border: 0;
+  }
 }
 
 .social__item {

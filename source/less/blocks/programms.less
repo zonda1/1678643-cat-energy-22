@@ -1,0 +1,14 @@
+.programms__wrapper {
+  .mobile-wrapper();
+
+  @media (min-width: @tablet-width) {
+    .tablet-wrapper();
+  }
+
+  @media (min-width: @desktop-width) {
+    .desktop-wrapper();
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
