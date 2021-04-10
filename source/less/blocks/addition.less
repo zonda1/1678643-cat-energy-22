@@ -4,7 +4,23 @@
   padding: 0;
 }
 
+.addition__wrapper {
+  @media (min-width: @tablet-width) {
+    max-width: 630px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  @media (min-width: @desktop-width) {
+    .desktop-wrapper();
+    // grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .addition__title {
+  width: 161px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -12,6 +28,16 @@
   line-height: 26px;
   color: @black;
   margin-bottom: 34px;
+  padding-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin-left: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 110px;
+  }
 }
 
 .addition__list {
@@ -23,8 +49,33 @@
   line-height: 18px;
   text-transform: uppercase;
   padding-bottom: 14px;
+  margin-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1;
+    column-gap: 104px;
+  }
 }
 
 .addition__item {
   margin-bottom: 20px;
+}
+
+.addition__legend {
+  line-height: 16px;
+  margin: 21px 0 32px 82px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+  }
 }

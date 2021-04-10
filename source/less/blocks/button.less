@@ -13,5 +13,18 @@
   &--order {
     width: 280px;
     height: 40px;
+    margin-left: 20px;
+    padding: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 52px;
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
   }
 }

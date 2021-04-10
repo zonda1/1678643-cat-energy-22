@@ -6,13 +6,16 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @special-dark-grey;
-  border-bottom: 1px solid @border-basic;
 }
 
 .info__list {
   .list-reset();
-  padding-bottom: 10px;
   margin-bottom: 22px;
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
 }
 
 .info__name,
