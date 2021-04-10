@@ -6,11 +6,17 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @special-dark-grey;
+  border-top: 1px solid @border-basic;
   border-bottom: 1px solid @border-basic;
+
+  @media (min-width: @tablet-width) {
+    border: 1px solid @border-basic;
+  }
 }
 
 .programm-pick__list {
   .list-reset();
+  padding-top: 6px;
   padding-bottom: 6px;
   margin-bottom: 26px;
 }

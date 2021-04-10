@@ -1,3 +1,20 @@
+.programm-selection__wrapper {
+  .mobile-wrapper();
+
+  @media (min-width: @tablet-width) {
+    max-width: 630px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    .desktop-wrapper();
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    column-gap: 80px;
+  }
+}
+
 .programm-selection__title {
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -5,7 +22,8 @@
   font-size: 36px;
   line-height: 36px;
   color: @black;
-  margin: 27px 0 37px;
+  margin-top: 27px;
+  margin-bottom: 37px;
 }
 
 .programm-selection__subtitle {
@@ -17,4 +35,9 @@
   text-transform: uppercase;
   color: @black;
   margin-bottom: 27px;
+
+  @media (min-width: @desktop-width) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
 }
