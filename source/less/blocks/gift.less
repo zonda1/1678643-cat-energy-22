@@ -2,7 +2,21 @@
   background: @basic-green url("../img/gift-background-mobile.jpg") no-repeat;
   padding: 58px 0 43px;
   margin-bottom: 35px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 245px;
+    height: 288px;
+  }
 }
+
 
 .gift__description {
   font-size: 16px;
