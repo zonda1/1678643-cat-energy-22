@@ -4,21 +4,80 @@
   font-weight: normal;
   font-size: 24px;
   line-height: 24px;
-  margin-top: 25px;
-  margin-bottom: 13px;
+  margin: 25px 0 13px 20px;
   padding-bottom: 36px;
   border-bottom: 1px solid @border-special-2;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 30px;
+    padding-left: 38px;
+    border: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    margin-left: 110px;
+  }
+}
+
+.additional-goods__wrapper {
+  .mobile-wrapper();
+
+  @media (min-width: @tablet-width) {
+    .tablet-wrapper();
+  }
+
+  @media (min-width: @desktop-width) {
+    .desktop-wrapper();
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .additional-goods__list {
   .list-reset();
   margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    border: 1px solid @border-special;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 896px;
+    height: 288px;
+    border-left: 0;
+    border-right: 0;
+  }
 }
 
 .additional-goods__item {
   padding-bottom: 19px;
   margin-bottom: 12px;
-  border-bottom: 1px solid @border-special-2;
+  border-bottom: 1px solid @border-special;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, min-content);
+    padding: 0 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 286px auto 245px;
+    grid-template-rows: auto;
+    column-gap: 38px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.additional-goods__item:last-child {
+  @media (min-width: @tablet-width) {
+    border: 0;
+  }
 }
 
 .additional-goods__name {
@@ -29,9 +88,31 @@
   line-height: 16px;
   text-transform: uppercase;
   color: @special-dark-grey-2;
+
+  @media (min-width: @tablet-width) {
+    margin: 25px 0 27px;
+  }
 }
 
 .additional-goods__info {
+  display: flex;
+  justify-content: space-between;
   line-height: 14px;
   color: @special-dark-grey;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.additional-goods__amount {
+  @media (min-width: @desktop-width) {
+    width: 245px;
+  }
+}
+
+.additional-goods__price {
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
