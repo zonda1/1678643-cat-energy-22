@@ -14,13 +14,15 @@
     <div class="page-header__wrapper">
       <a class="page-header__logo-pic">
         <img src="img/logo-pic-mobile.svg" width="33" height="38" alt="Логотип с котом">
-        <img src="img/logo-title.png" width="101" height="18" alt="Логотип Кэт энерджи"></a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <img src="img/logo-title.png" width="101" height="18" alt="Логотип Кэт энерджи">
+      </a>
+
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden" >Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link-current">главная</a>
+              <a class="main-nav__link main-nav__link--current">главная</a>
             </li>
             <li class="main-nav__item">
               <a href="catalog.html" class="main-nav__link">каталог продукции</a>
@@ -31,7 +33,7 @@
           </ul>
         </div>
       </nav>
-    </div>
+      </div>
   </header>
 
   <main class="page-main">
@@ -40,9 +42,9 @@
     <section class="promo">
       <div class="promo__wrapper">
         <div class="promo__description">
-          <h2 class="promo__title">Функциональное питание для котов</h2>
+          <h2 class="promo__title">Функциональное <br> питание для котов</h2>
           <p class="promo__subtitle">Занялся собой? Займись котом!</p>
-          <!-- <img class="promo__pic" src="img/can-promo-mobile.jpg" width="280" height="270" alt=""> -->
+          <img class="promo__pic" src="img/can-promo-mobile.jpg" width="280" height="270" alt="">
         </div>
         <a href="form.html" class="promo__button">подобрать программу</a>
       </div>
@@ -51,6 +53,7 @@
       <div class="programms__wrapper">
         <h2 class="visually-hidden">Программы на выбор</h2>
         <div class="programm slim">
+          <img class="programm__slim-pic" src="img/cat_slim-mobile.svg" width="50" height="53" alt="Стройная кошка">
           <h3 class="programm__title slim__title">Похудение</h3>
           <p class="programm__description slim__description">Ваш кот весит больше собаки и почти утратил способность
             лазить по деревьям? Пора
@@ -58,6 +61,7 @@
           <a href="#" class="programm__link slim__link">каталог slim</a>
         </div>
         <div class="programm weight">
+          <img class="programm__weight-pic" src="img/cat_muscle-mobile.svg" width="67" height="50" alt="Спортивная кошка">
           <h3 class="programm__title weight__title">Набор массы</h3>
           <p class="programm__description weight__description">Заработать авторитет среди дворовых котов и даже собак?
             Серия Cat Energy Pro
@@ -117,7 +121,7 @@
               5 кг
             </dt>
             <dd class="stats__description">
-              снижение веса
+              снижение <br> веса
             </dd>
           </div>
           <div class="stats__item">
@@ -125,7 +129,7 @@
               60 дней
             </dt>
             <dd class="stats__description">
-              затрачено времени
+              затрачено <br> времени
             </dd>
           </div>
           <div class="stats__item">
@@ -212,7 +216,22 @@
       </div>
     </div>
   </footer>
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
 
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
 </body>
 
 </html>

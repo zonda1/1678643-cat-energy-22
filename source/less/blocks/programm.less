@@ -1,4 +1,7 @@
 .programm {
+  display: grid;
+  grid-template-columns: 69px auto;
+  grid-template-rows: repeat(3, min-content);
   background-color: @basic-grey;
   height: 266px;
   padding-top: 21px;
@@ -6,7 +9,7 @@
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 45px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -29,6 +32,8 @@
 }
 
 .programm__description {
+  grid-column-start: 1;
+  grid-column-end: 3;
   padding-bottom: 23px;
   margin-bottom: 15px;
   color: @special-dark-grey;
@@ -36,6 +41,9 @@
 }
 
 .programm__link {
+  position: relative;
+  grid-column-start: 1;
+  grid-column-end: 3;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -44,4 +52,81 @@
   text-transform: uppercase;
   color: @black;
   margin-bottom: 22px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 12px;
+    left: 102px;
+    top: 0;
+    background-image: url("../img/icons/arrow-right-short-icon.svg");
+  }
+
+  &:hover::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 12px;
+    left: 102px;
+    top: 0;
+    background-image: url("../img/icons/arrow-right-long-icon.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .programm {
+    height: auto;
+    grid-template-columns: 377px 1fr;
+    grid-template-rows: repeat(3, min-content);
+    padding: 77px 28px 57px 53px;
+  }
+
+  .programm__slim-pic,
+  .programm__weight-pic {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
+  .programm__description {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border: 0;
+  }
+
+  .programm__link {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programm {
+    height: auto;
+    grid-template-columns: 69px auto;
+    padding: 77px 28px 57px 53px;
+  }
+
+  .programm__slim-pic,
+  .programm__weight-pic {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .programm__description {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .programm__link {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
