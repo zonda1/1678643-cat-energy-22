@@ -18,7 +18,7 @@
       </a>
 
       <nav class="main-nav main-nav--closed main-nav--nojs">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden" >Открыть меню</span></button>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -33,7 +33,7 @@
           </ul>
         </div>
       </nav>
-      </div>
+    </div>
   </header>
 
   <main class="page-main">
@@ -61,7 +61,8 @@
           <a href="#" class="programm__link slim__link">каталог slim</a>
         </div>
         <div class="programm weight">
-          <img class="programm__weight-pic" src="img/cat_muscle-mobile.svg" width="67" height="50" alt="Спортивная кошка">
+          <img class="programm__weight-pic" src="img/cat_muscle-mobile.svg" width="67" height="50"
+            alt="Спортивная кошка">
           <h3 class="programm__title weight__title">Набор массы</h3>
           <p class="programm__description weight__description">Заработать авторитет среди дворовых котов и даже собак?
             Серия Cat Energy Pro
@@ -141,8 +142,9 @@
             </dd>
           </div>
         </dl>
-        <img src="img/cat-before-mobile.jpg" width="311" height="232" alt="Вид толстого кота">
+        <img class="stats__fat-cat" src="img/cat-before-mobile.jpg" width="311" height="232" alt="Вид толстого кота">
         <!-- <img src="img/cat-after-mobile.jpg" width="251" height="240" alt="Вид худого кота"> -->
+        <img class="stats__fat-slim-cat" src="img/cat-before-after-tablet.jpg" width="708" height="620" alt="Вид худого и толстого кота">
         <div class="stats__slider">
           <label class="stats__before">
             было
@@ -168,7 +170,9 @@
             Санкт-Петербург</p>
         </div>
       </header>
-      <img class="contacts__map" src="img/map-mobile.png" width="320" height="362" alt="Кэт энерджи на карте">
+      <iframe class="contacts__map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2826.4406869350723!2d30.319068147022683!3d59.93885603821426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1618604274265!5m2!1sru!2sru"
+        width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
   </main>
   <footer class="page-footer">
@@ -222,7 +226,7 @@
 
     navMain.classList.remove('main-nav--nojs');
 
-    navToggle.addEventListener('click', function() {
+    navToggle.addEventListener('click', function () {
       if (navMain.classList.contains('main-nav--closed')) {
         navMain.classList.remove('main-nav--closed');
         navMain.classList.add('main-nav--opened');
@@ -231,6 +235,7 @@
         navMain.classList.remove('main-nav--opened');
       }
     });
+
   </script>
 </body>
 

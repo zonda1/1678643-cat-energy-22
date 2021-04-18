@@ -19,8 +19,9 @@
     .desktop-wrapper();
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 436px 1fr;
     grid-template-rows: repeat(2, auto);
+    column-gap: 134px;
     padding-bottom: 75px;
   }
 }
@@ -35,6 +36,7 @@
     height: 100px;
     grid-row-start: 1;
     grid-row-end: 2;
+    margin-top: 70px;
   }
 
   .stats__list {
@@ -45,6 +47,7 @@
   }
 
   .stats__slider {
+    z-index: 2;
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 2;
@@ -53,9 +56,12 @@
     margin-bottom: 14px;
   }
 
-  .stats__wrapper img {
-    grid-row-start: 1;
-    grid-row-end: 2;
+  .stats__fat-slim-cat {
+    position: absolute;
+    width: 690px;
+    height: 656px;
+    top: -194px;
+    right: 0;
   }
 }
 
@@ -78,6 +84,11 @@
 .stats__intro {
   margin-bottom: 25px;
   color: @special-dark-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .stats__list {
@@ -132,6 +143,11 @@
   line-height: 24px;
   color: @black;
   margin-bottom: 9px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .stats__item:first-child .stats__number::before {
@@ -182,6 +198,11 @@
   color: @special-dark-grey;
   margin: 0;
   z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .stats__cost,
@@ -193,6 +214,10 @@
   line-height: 20px;
   text-transform: uppercase;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .stats__before,
@@ -206,6 +231,8 @@
   color: @black;
 
   @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
     border-bottom: 1px dotted rgba(@black, 0.24);
   }
 }
@@ -215,6 +242,22 @@
 
   @media (min-width: @desktop-width) {
     margin-left: 42px;
+  }
+}
+
+.stats__fat-cat {
+  margin-left: -20px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.stats__fat-slim-cat {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
   }
 }
 
