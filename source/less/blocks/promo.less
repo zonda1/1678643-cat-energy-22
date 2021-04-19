@@ -13,6 +13,7 @@
     .desktop-wrapper();
     align-items: flex-start;
     padding-left: 80px;
+    margin-bottom: 80px;
   }
 }
 
@@ -23,6 +24,7 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
+    position: relative;
     background-color: @white;
     text-align: start;
     height: 181px;
@@ -63,6 +65,25 @@
     color: @black;
   }
 }
+
+.promo__pic {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    left: -87px;
+    top: 221px;
+    width: 709px;
+    height: 609px;
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 522px;
+    height: 499px;
+    top: -20px;
+    left: 368px;
+  }
+}
+
 
 .promo__button {
   display: flex;
