@@ -56,8 +56,95 @@
 
 .connection__item {
   margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   input {
+    padding: 0;
     height: 45px;
+    border: 1px solid @border-special;
+  }
+}
+
+.connection__email {
+  width: 219px;
+  padding-left: 15px;
+  position: relative;
+
+  &::placeholder {
+    letter-spacing: -1px;
+    color: @special-dark-grey;
+    padding-left: 15px;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid @special-dark-grey;
+
+    .connection__email-icon line {
+      stroke: red;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 551px;
+    height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 486px;
+  }
+}
+
+.connection__email-icon {
+  position: absolute;
+  right: 35px;
+
+  @media (min-width: @tablet-width) {
+    right: 102px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 643px;
+  }
+}
+
+
+.connection__tel {
+  width: 209px;
+  padding-left: 15px;
+  position: relative;
+
+  &::placeholder {
+    color: @special-dark-grey;
+    padding-left: 16px;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid @special-dark-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 535px;
+    height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 472px;
+  }
+}
+
+.connection__tel-icon {
+  position: absolute;
+  right: 33px;
+
+  @media (min-width: @tablet-width) {
+    right: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 127px;
   }
 }

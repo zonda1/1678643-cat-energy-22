@@ -79,3 +79,29 @@
     margin-left: 0;
   }
 }
+
+.addition__item label {
+  position: relative;
+  margin-left: 46px;
+}
+
+.addition__input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -46px;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  border: 1px solid @border-special;
+}
+
+.addition__input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -44px;
+  width: 26px;
+  height: 26px;
+  background-image: url("../img/icons/tick-icon.svg");
+  background-position: 0 0;
+}
