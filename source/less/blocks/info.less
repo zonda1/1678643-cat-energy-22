@@ -21,7 +21,14 @@
 .info__name,
 .info__weight,
 .info__age {
+  padding: 0;
   height: 46px;
+  border: 1px solid @border-special;
+
+  &::placeholder {
+    padding-left: 16px;
+    color: @special-dark-grey;
+  }
 }
 
 .info__item {

@@ -22,13 +22,13 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--current">главная</a>
+              <a class="main-nav__link main-nav__link--white main-nav__link--different">главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="catalog.html" class="main-nav__link">каталог продукции</a>
+              <a href="catalog.html" class="main-nav__link main-nav__link--white">каталог продукции</a>
             </li>
             <li class="main-nav__item">
-              <a href="form.html" class="main-nav__link">подбор программы</a>
+              <a href="form.html" class="main-nav__link main-nav__link--white">подбор программы</a>
             </li>
           </ul>
         </div>
@@ -144,7 +144,8 @@
         </dl>
         <img class="stats__fat-cat" src="img/cat-before-mobile.jpg" width="311" height="232" alt="Вид толстого кота">
         <!-- <img src="img/cat-after-mobile.jpg" width="251" height="240" alt="Вид худого кота"> -->
-        <img class="stats__fat-slim-cat" src="img/cat-before-after-tablet.jpg" width="708" height="620" alt="Вид худого и толстого кота">
+        <img class="stats__fat-slim-cat" src="img/cat-before-after-tablet.jpg" width="708" height="620"
+          alt="Вид худого и толстого кота">
         <div class="stats__slider">
           <label class="stats__before">
             было
@@ -220,23 +221,7 @@
       </div>
     </div>
   </footer>
-  <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
-
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
-
-  </script>
+  <script src="js/main-nav-popup.js"></script>
 </body>
 
 </html>
