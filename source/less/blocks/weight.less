@@ -1,3 +1,31 @@
 .weight__title {
-  margin-left: 9px;
+  margin-left: 2px;
+}
+
+@media (min-width: @tablet-width) {
+  .weight__description {
+    width: 342px;
+  }
+
+  .weight__link {
+    &::after {
+      left: 129px;
+      top: 9px;
+    }
+
+    &:hover::after {
+      left: 129px;
+      top: 9px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .weight__description {
+    width: 457px;
+  }
+
+  .weight__title {
+    margin-left: -2px;
+  }
 }
