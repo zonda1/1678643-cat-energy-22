@@ -8,12 +8,13 @@
   color: @special-dark-grey;
   position: relative;
 
+
   &::before {
     content: "";
     position: absolute;
     height: 1px;
     width: 320px;
-    top: -10px;
+    top: -29px;
     left: -20px;
     background-color: @border-basic;
   }
@@ -23,12 +24,14 @@
     position: absolute;
     height: 1px;
     width: 320px;
-    bottom: -10px;
+    bottom: -24px;
     left: -20px;
     background-color: @border-basic;
   }
 
   @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
     border: 1px solid @border-basic;
 
     &::before,
@@ -40,19 +43,30 @@
 
 .programm-pick__list {
   .list-reset();
-  margin-bottom: 26px;
+  margin-bottom: 50px;
   padding-left: 45px;
 
+
   @media (min-width: @tablet-width) {
-    padding: 30px 0 11px 88px;
+    padding: 30px 0 7px 88px;
+    margin-bottom: 74px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 196px;
+    margin-bottom: 0;
   }
 }
 
 .programm-pick__item {
-  margin-bottom: 19px;
+  margin-bottom: 25px;
 
   & label {
     position: relative;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 23px;
   }
 }
 
@@ -65,6 +79,13 @@
   height: 30px;
   border: 1px solid @border-special;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    top: -6px;
+    left: -61px;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .programm-pick__input-radio:checked + label::after {
@@ -76,4 +97,11 @@
   height: 13.5px;
   background-color: @basic-green;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    top: 5px;
+    left: -50px;
+    width: 18px;
+    height: 18px;
+  }
 }

@@ -1,13 +1,14 @@
 .addition {
   border: none;
-  border-top: 2px solid @basic-green;
+  // border-top: 2px solid @basic-green;
   padding: 0;
+  margin: 0;
 }
 
 .addition__wrapper {
   @media (min-width: @tablet-width) {
     max-width: 630px;
-    margin: 0 auto;
+    margin: 0 auto 72px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
@@ -15,7 +16,7 @@
 
   @media (min-width: @desktop-width) {
     .desktop-wrapper();
-    // grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 82px;
   }
 }
 
@@ -27,16 +28,60 @@
   font-size: 24px;
   line-height: 26px;
   color: @black;
-  margin-bottom: 34px;
+  margin-bottom: 39px;
   padding-left: 20px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 136px;
+    height: 2px;
+    background-color: @basic-green;
+    right: -159px;
+    top: 15px;
+  }
 
   @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    width: auto;
     padding: 0;
     margin-left: 70px;
+    margin-bottom: 62px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background-color: @basic-green;
+      left: -69px;
+      top: 21px;
+    }
+
+    &::after {
+      width: 446px;
+      height: 2px;
+      right: -487px;
+      top: 21px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin-left: 110px;
+
+    &::before {
+      width: 70px;
+      left: -110px;
+      top: 23px;
+    }
+
+    &::after {
+      width: 1078px;
+      right: -1118px;
+      top: 23px;
+    }
   }
 }
 
@@ -48,27 +93,39 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  padding-bottom: 14px;
+  margin-bottom: 41px;
   margin-left: 20px;
 
   @media (min-width: @tablet-width) {
-    margin: 0;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 0 16px;
     grid-column-start: 1;
     grid-column-end: 3;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 344px 1fr;
     grid-template-rows: repeat(2, auto);
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 221px);
     grid-template-rows: 1;
     column-gap: 104px;
+    margin-bottom: 25px;
   }
 }
 
+.addition__item:first-child {
+  margin-bottom: 25px;
+}
+
 .addition__item {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 14px;
+    margin-bottom: 42px;
+  }
 }
 
 .addition__legend {
@@ -76,7 +133,12 @@
   margin: 21px 0 32px 82px;
 
   @media (min-width: @tablet-width) {
-    margin-left: 0;
+    font-size: 16px;
+    margin: 17px 0 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 18px 0 0 40px;
   }
 }
 
@@ -89,10 +151,17 @@
   content: "";
   position: absolute;
   left: -46px;
-  top: 0;
-  width: 28px;
-  height: 28px;
+  top: -2px;
+  width: 30px;
+  height: 30px;
   border: 1px solid @border-special;
+
+  @media (min-width: @tablet-width) {
+    left: -59px;
+    top: -5px;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .addition__input-checkbox:checked + label::after {
@@ -104,4 +173,9 @@
   height: 26px;
   background-image: url("../img/icons/tick-icon.svg");
   background-position: 0 0;
+
+  @media (min-width: @tablet-width) {
+    top: 2px;
+    left: -52px;
+  }
 }
