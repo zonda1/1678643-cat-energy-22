@@ -1,7 +1,7 @@
 .connection {
   border: none;
-  border-top: 2px solid @basic-green;
   padding: 0;
+  margin: 0;
 }
 
 .connection__title {
@@ -13,14 +13,59 @@
   line-height: 26px;
   margin-bottom: 35px;
   padding-left: 20px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 99px;
+    height: 2px;
+    background-color: @basic-green;
+    right: -113px;
+    top: 16px;
+  }
 
   @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    width: auto;
     padding: 0;
-    margin-left: 70px;
+    margin-left: 69px;
+    margin-bottom: 76px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background-color: @basic-green;
+      left: -69px;
+      top: 21px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 145px;
+      height: 2px;
+      background-color: @basic-green;
+      right: -187px;
+      top: 21px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin-left: 110px;
+
+    &::before {
+      width: 70px;
+      left: -110px;
+    }
+
+    &::after {
+      width: 778px;
+      right: -818px;
+    }
   }
 }
 
@@ -28,12 +73,13 @@
   .mobile-wrapper();
 
   @media (min-width: @tablet-width) {
-    max-width: 630px;
-    margin: 0 auto;
+    max-width: 634px;
+    margin: 0 65px 35px 68px;
   }
 
   @media (min-width: @desktop-width) {
     .desktop-wrapper();
+    margin-bottom: 36px;
   }
 }
 
@@ -47,10 +93,15 @@
   text-transform: uppercase;
   padding-bottom: 10px;
 
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 80px;
+    column-gap: 77px;
   }
 }
 
@@ -59,21 +110,55 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+    justify-content: flex-start;
+
+    &:first-child {
+      margin-left: 3px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:first-child {
+      margin-left: 0;
+
+      label {
+        margin-top: -1px;
+      }
+    }
+
+    &:last-child {
+      label {
+        margin-top: -1px;
+      }
+    }
+  }
 
   input {
+    font-family: "Oswald", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 18px;
     padding: 0;
     height: 45px;
     border: 1px solid @border-special;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+      height: 52px;
+    }
   }
 }
 
 .connection__email {
   width: 219px;
   padding-left: 15px;
-  position: relative;
+
 
   &::placeholder {
-    letter-spacing: -1px;
     color: @special-dark-grey;
     padding-left: 15px;
   }
@@ -88,31 +173,43 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 551px;
+    flex-grow: 1;
     height: 52px;
+    margin-left: 18px;
+
+    &::placeholder {
+      padding-left: 21px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 486px;
+    margin-left: 21px;
+
+    &::placeholder {
+      padding-left: 19px;
+    }
   }
 }
 
 .connection__email-icon {
   position: absolute;
-  right: 35px;
+  top: 16px;
+  right: 15px;
 
   @media (min-width: @tablet-width) {
-    right: 102px;
+    top: 17px;
+    right: 18px;
   }
 
   @media (min-width: @desktop-width) {
-    left: 643px;
+    right: 20px;
   }
 }
 
 
 .connection__tel {
-  width: 209px;
+  width: 204px;
   padding-left: 15px;
   position: relative;
 
@@ -127,24 +224,35 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 535px;
+    flex-grow: 1;
     height: 52px;
+    margin-left: 15px;
+
+    &::placeholder {
+      padding-left: 21px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 472px;
+
+    &::placeholder {
+      padding-left: 19px;
+    }
   }
 }
 
 .connection__tel-icon {
   position: absolute;
-  right: 33px;
+  top: 13px;
+  right: 13px;
 
   @media (min-width: @tablet-width) {
-    right: 100px;
+    top: 16px;
+    right: 17px;
   }
 
   @media (min-width: @desktop-width) {
-    right: 127px;
+    top: 15px;
   }
 }

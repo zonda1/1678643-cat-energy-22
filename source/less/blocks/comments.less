@@ -1,8 +1,15 @@
 .comments {
   border: none;
-  border-top: 2px solid @basic-green;
   padding: 0;
-  margin-bottom: 23px;
+  margin: 0 0 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 62px;
+  }
 }
 
 .comments__title {
@@ -14,14 +21,58 @@
   line-height: 26px;
   margin-bottom: 37px;
   padding-left: 20px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 158px;
+    height: 2px;
+    background-color: @basic-green;
+    right: -180px;
+    top: 15px;
+  }
 
   @media (min-width: @tablet-width) {
+    width: auto;
+    font-size: 36px;
+    line-height: 36px;
     padding: 0;
     margin-left: 70px;
+    margin-bottom: 76px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background-color: @basic-green;
+      left: -69px;
+      top: 21px;
+    }
+
+    &::after {
+      width: 478px;
+      height: 2px;
+      right: -516px;
+      top: 21px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin-left: 110px;
+
+    &::before {
+      width: 70px;
+      left: -110px;
+      top: 22px;
+    }
+
+    &::after {
+      width: 1108px;
+      right: -1148px;
+      top: 22px;
+    }
   }
 }
 
@@ -38,14 +89,21 @@
   border: 1px solid @special-grey-3;
 
   &::placeholder {
-    padding-left: 15px;
+    padding-top: 7px;
+    padding-left: 12px;
     color: @special-dark-grey;
   }
 
   @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
     margin-left: 70px;
     width: 631px;
     height: 174px;
+
+    &::placeholder {
+      padding-left: 15px;
+    }
   }
 
   @media (min-width: @desktop-width) {
