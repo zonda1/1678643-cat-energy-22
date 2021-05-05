@@ -15,17 +15,23 @@
     .tablet-wrapper();
     display: flex;
     flex-wrap: wrap;
-    // justify-content: space-between;
     align-items: center;
   }
 
   @media (min-width: @desktop-width) {
     .desktop-wrapper();
-    // justify-content: space-between;
   }
 }
 
 .page-footer__logo {
+  :hover {
+    opacity: 0.8;
+  }
+
+  :active {
+    opacity: 0.6;
+  }
+
   @media (min-width: @tablet-width) {
     margin-top: 7px;
     margin-right: 156px;
