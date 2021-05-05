@@ -70,21 +70,27 @@
   }
 }
 
-.programm-pick__input-radio + label::before {
-  content: "";
-  position: absolute;
-  top: -4px;
-  left: -45px;
-  width: 30px;
-  height: 30px;
-  border: 1px solid @border-special;
-  border-radius: 50%;
+.programm-pick__input-radio {
+  + label::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -45px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid @border-special;
+    border-radius: 50%;
 
-  @media (min-width: @tablet-width) {
-    top: -6px;
-    left: -61px;
-    width: 40px;
-    height: 40px;
+    @media (min-width: @tablet-width) {
+      top: -6px;
+      left: -61px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &:hover + label::before {
+    border: 1px solid @special-grey-4;
   }
 }
 

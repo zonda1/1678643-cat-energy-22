@@ -38,6 +38,11 @@
   flex-grow: 1;
   border: 1px solid @border-special;
 
+  &:focus {
+    outline: none;
+    border: 2px solid @special-dark-grey;
+  }
+
   &::placeholder {
     padding-left: 16px;
     color: @special-dark-grey;
