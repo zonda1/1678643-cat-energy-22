@@ -1,7 +1,6 @@
 .main-nav__list {
   .list-reset();
   text-align: center;
-  // margin-top: 14px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -33,6 +32,14 @@
     &--current {
       padding-bottom: 7px;
       border-bottom: 2px solid @basic-green;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 
