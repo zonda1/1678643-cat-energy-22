@@ -32,6 +32,15 @@
     grid-template-rows: repeat(2, auto);
     column-gap: 134px;
     padding-bottom: 46px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 395px;
+      height: 462px;
+      right: -110px;
+      background-color: @special-grey;
+    }
   }
 }
 
@@ -310,7 +319,6 @@
   margin-left: 27px;
   margin-top: 18px;
   position: relative;
-  // top: -71px;
 
 
   @media (min-width: @tablet-width) {

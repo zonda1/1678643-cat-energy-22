@@ -147,20 +147,26 @@
   margin-left: 46px;
 }
 
-.addition__input-checkbox + label::before {
-  content: "";
-  position: absolute;
-  left: -46px;
-  top: -2px;
-  width: 30px;
-  height: 30px;
-  border: 1px solid @border-special;
+.addition__input-checkbox {
+  + label::before {
+    content: "";
+    position: absolute;
+    left: -46px;
+    top: -2px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid @border-special;
 
-  @media (min-width: @tablet-width) {
-    left: -59px;
-    top: -5px;
-    width: 40px;
-    height: 40px;
+    @media (min-width: @tablet-width) {
+      left: -59px;
+      top: -5px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &:hover + label::before {
+    border: 1px solid @special-grey-4;
   }
 }
 

@@ -145,6 +145,19 @@
     height: 45px;
     border: 1px solid @border-special;
 
+    &:focus {
+      outline: none;
+      border: 2px solid @special-dark-grey;
+
+      +.connection__email-icon {
+        stroke: @basic-green;
+      }
+
+      +.connection__tel-icon {
+        fill: @basic-green;
+      }
+    }
+
     @media (min-width: @tablet-width) {
       font-size: 20px;
       line-height: 30px;
@@ -161,15 +174,6 @@
   &::placeholder {
     color: @special-dark-grey;
     padding-left: 15px;
-  }
-
-  &:focus {
-    outline: none;
-    border: 2px solid @special-dark-grey;
-
-    .connection__email-icon line {
-      stroke: red;
-    }
   }
 
   @media (min-width: @tablet-width) {
@@ -196,6 +200,7 @@
   position: absolute;
   top: 16px;
   right: 15px;
+  stroke: @special-dark-grey-2;
 
   @media (min-width: @tablet-width) {
     top: 17px;
@@ -216,11 +221,6 @@
   &::placeholder {
     color: @special-dark-grey;
     padding-left: 16px;
-  }
-
-  &:focus {
-    outline: none;
-    border: 2px solid @special-dark-grey;
   }
 
   @media (min-width: @tablet-width) {
@@ -246,6 +246,7 @@
   position: absolute;
   top: 13px;
   right: 13px;
+  fill: @black;
 
   @media (min-width: @tablet-width) {
     top: 16px;
