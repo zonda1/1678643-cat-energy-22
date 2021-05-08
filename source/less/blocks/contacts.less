@@ -43,8 +43,6 @@
   @media (min-width: @tablet-width) {
     .tablet-wrapper();
     padding: 0 40px;
-    // margin-top: 39px;
-    // margin-bottom: 31px;
   }
 
   @media (min-width: @desktop-width) {
@@ -80,12 +78,13 @@
 
 .contacts__address {
   width: 140px;
-  height: 83.5px;
+  height: 60px;
   line-height: 20px;
+  text-align: start;
   color: @special-dark-grey;
   margin: 28px 0 0;
 
-  br {
+  br:last-of-type {
     display: none;
   }
 
@@ -99,7 +98,7 @@
     margin-right: 2px;
     margin-bottom: 26px;
 
-    br {
+    br:last-of-type {
       display: block;
     }
   }
