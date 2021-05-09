@@ -3,8 +3,12 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="icon" href="img/favicon_io/favicon-32x32.png" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="img/favicon_io/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
   <title>Кэт энерджи</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 </head>
 
@@ -50,6 +54,9 @@
           <h2 class="promo__title">Функциональное <br> питание для котов</h2>
           <p class="promo__subtitle">Занялся собой? Займись котом!</p>
           <picture>
+            <source type="image/webp" media="(min-width: 1220px)" srcset="img/can-promo-desktop.webp 1x, img/can-promo-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/can-promo-tablet.webp 1x, img/can-promo-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/can-promo-mobile.webp 1x, img/can-promo-mobile@2x.webp 2x">
             <source media="(min-width:1220px)" srcset="img/can-promo-desktop.png 1x, img/can-promo-desktop@2x.png 2x">
             <source media="(min-width:768px)" srcset="img/can-promo-tablet.png 1x, img/can-promo-tablet@2x.png 2x">
             <img class="promo__pic" src="img/can-promo-mobile.png" width="280" height="270"
@@ -163,6 +170,8 @@
         <img class="stats__fat-cat" src="img/cat-before-mobile.png" width="311" height="232"
           srcset="img/cat-before-mobile@2x.png 2x" alt="Вид толстого кота">
         <picture>
+          <source type="image/webp" media="(min-width: 1220px)" srcset="img/cat-before-after-desktop.webp 1x, img/cat-before-after-desktop@2x.webp 2x">
+          <source type="image/webp" srcset="img/cat-before-after-tablet.webp 1x, img/cat-before-after-tablet@2x.webp 2x">
           <source media="(min-width:1220px)"
             srcset="img/cat-before-after-desktop.png 1x, img/cat-before-after-desktop@2x.png 2x">
           <img class="stats__fat-slim-cat" src="img/cat-before-after-tablet.png" width="708" height="620"
@@ -189,7 +198,7 @@
           <p class="contacts__title">Приглашаем <br>
             к сотрудничеству дилеров!</p>
           <p class="contacts__address">ул. Большая
-            Конюшенная, д. 19/8 <br><br>
+            Конюшенная, д. 19/8<br><br>
             Санкт-Петербург</p>
         </div>
       </header>
@@ -236,7 +245,7 @@
       </div>
     </div>
   </footer>
-  <script src="js/main-nav-popup.js"></script>
+  <script src="js/main-nav-popup.min.js"></script>
 </body>
 
 </html>
